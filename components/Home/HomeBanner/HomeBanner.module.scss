@@ -1,0 +1,87 @@
+.banner_wrapper {
+  background: url('/vre/pages/img/home-banner-background.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+  > img {
+    width: 110%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  @media (min-width: 1800px) {
+    height: 850px;
+  }
+}
+.banner_content {
+  max-width: 1366px;
+  margin: 0 auto;
+  position: relative;
+}
+.banner_block {
+  margin-left: 110px;
+  padding-top: 172px;
+  @media (min-width: 1800px) {
+    padding-top: 272px;
+  }
+  > h2 {
+    color: #003262;
+    font-size: 35px;
+    line-height: 47px;
+    margin: 0 0 0 -15px;
+  }
+  > p {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 4px 0 17px;
+    width: 472px;
+    font-weight: 300;
+    color: #003262;
+  }
+}
+.banner_learn_more {
+  font-size: 20px;
+  border: 1px solid #003262;
+  border-radius: 6px;
+  padding: 0px 25px;
+  height: 40px;
+  line-height: 36px;
+  font-weight: 300;
+  display: inline-block;
+  color: #003262;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: #003262;
+    color: white;
+  }
+}
+.banner_gdpr {
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+  margin-top: 45px;
+  img {
+    width: 47px;
+    margin-right: 16px;
+  }
+}
+.banner_gdpr_text {
+  h4 {
+    color: #5bab58;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    margin: 0;
+  }
+  p {
+    color: #003262;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+    margin: -2px 0 0;
+  }
+}

@@ -1,0 +1,31 @@
+.home_header_wrapper {
+  background-color: #003262;
+}
+.home_logo {
+  margin-left: 33px;
+  cursor: pointer;
+}
+.home_header_content {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+.header_right_navs {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 0;
+  li {
+    color: white;
+    list-style: none;
+    font-size: 16px;
+    margin-right: 45px;
+    font-weight: 300;
+  }
+}
+.nav_login_btn {
+  border-radius: 6px;
+}

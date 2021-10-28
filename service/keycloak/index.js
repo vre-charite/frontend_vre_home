@@ -1,0 +1,1 @@
+export { keycloak } from './config';

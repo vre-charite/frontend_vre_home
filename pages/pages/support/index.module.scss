@@ -1,0 +1,150 @@
+.support_section {
+  background-color: #f0f2f5;
+  min-height: 80vh;
+}
+.support_content {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 14vh 70px 10vh;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1180px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+.support_left {
+  width: 36%;
+  color: #062c57;
+
+  h3 {
+    color: #062c57;
+    font-size: 40px;
+    line-height: 38px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    margin-bottom: 22px;
+    :global {
+      .anticon-medicine-box {
+        font-size: 28px;
+        margin-right: 18px;
+        margin-top: 4px;
+      }
+    }
+    span {
+      vertical-align: middle;
+    }
+  }
+  p {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 300;
+    margin: 22px 0;
+    a {
+      font-style: italic;
+      color: #1890ff;
+    }
+  }
+  @media (max-width: 1180px) {
+    width: 100%;
+  }
+}
+
+.support_right {
+  width: 60%;
+  min-height: 530px;
+  border-radius: 9px;
+  box-shadow: 0px 3px 6px #00000029;
+  background: white;
+  @media (max-width: 1180px) {
+    width: 100%;
+    margin-top: 30px;
+  }
+  h3 {
+    padding: 15px 28px 10px;
+    margin-bottom: 0;
+    color: #003262;
+    border-bottom: 1px solid #f1f0f4;
+    :global {
+      .anticon {
+        font-size: 22px;
+        margin-right: 18px;
+        margin-top: 6px;
+      }
+    }
+    span {
+      font-size: 25px;
+      line-height: 38px;
+      vertical-align: middle;
+    }
+  }
+  :global {
+    .form-content {
+      padding: 20px 28px;
+      .ant-form-item {
+        margin-bottom: 18px;
+      }
+      .form-row {
+        display: flex;
+        justify-content: space-between;
+        .form-half-row {
+          width: 48%;
+        }
+      }
+
+      .ant-form-item-label {
+        padding-bottom: 1px;
+        padding-left: 10px;
+        label {
+          font-size: 16px;
+          line-height: 21px;
+          color: #062c57;
+        }
+      }
+      .ant-select-selector {
+        border: 1px solid #003262 !important;
+        border-radius: 6px;
+        font-size: 16px;
+        color: #003262;
+        box-shadow: none !important;
+      }
+      .ant-select {
+        box-shadow: none;
+      }
+      input.ant-input {
+        border: 1px solid #003262;
+        border-radius: 6px;
+        font-size: 16px;
+        color: #003262;
+        box-shadow: none;
+      }
+      textarea.ant-input {
+        border: 1px solid #003262;
+        border-radius: 6px;
+        font-size: 16px;
+        color: #003262;
+        box-shadow: none;
+      }
+      .bottom-line {
+        display: flex;
+        justify-content: right;
+        height: 60px;
+        align-items: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        .ant-btn {
+          width: 120px;
+          font-size: 18px;
+          border-radius: 6px;
+          line-height: 22px;
+          margin-left: 28px;
+          img {
+            width: 20px;
+            margin-top: -4px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
