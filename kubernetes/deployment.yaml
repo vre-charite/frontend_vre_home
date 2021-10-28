@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vre-home
+  namespace: utility
+  labels:
+    app: vre-home
+    env: charite
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vre-home
+      env: charite
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 33%
+  template:
+    metadata:
+      labels:
+        app: vre-home
+        env: charite
+    spec:
+      containers:
+        - name: vre-home
+          image: 10.32.42.225:5000/vre-home:<VERSION>
+          ports:
+            - containerPort: 80
+          env:
+          - name: env
+            value: "charite"
+          - name: REACT_APP_ENV
+            value: "charite"
+          volumeMounts:
+            - mountPath: /etc/nginx/conf.d
+              readOnly: true
+              name: nginx-conf-vre-home
+          resources:
+            requests:
+              memory: "1000Mi"
+              cpu: "1"
+            limits:
+              memory: "1000Mi"
+              cpu: "1"
+      nodeSelector:
+        namespace: utility
+      volumes:
+        - name: nginx-conf-vre-home
+          configMap:
+            name: nginx-conf-vre-home
+            items:
+              - key: vre-home.conf
+                path: vre-home.conf
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vre-home
+  namespace: utility
+  labels:
+    app: vre-home
+    env: charite
+spec:
+  ports:
+  - name: vre-home
+    port: 80
+    targetPort: 80
+  selector:
+    app: vre-home
+    env: charite
+  type: ClusterIP
