@@ -12,13 +12,13 @@ const Resources: NextPage = () => {
         <section className={styles['resources']}>
           <h2>Resources</h2>
           <div className={styles['subtitle']}>
-            The VRE provides a rich ecosystem of tools, integrations and support
-            resources to make complex biomedical analysis possible in a secure
-            environment.
+            The VRE provides a rich ecosystem of tools, integrations, and
+            support resources to make complex biomedical analysis possible in a
+            secure environment.
           </div>
         </section>
         <div className={styles['background']}>
-          <img src="/vre/pages/img/about-title-background.svg"></img>
+          <img src="/vre/pages/img/about-title-background.png"></img>
         </div>
         <section className={styles['workbench']}>
           <h2>Workbench Tools</h2>
@@ -82,7 +82,7 @@ const Resources: NextPage = () => {
               imgSrc="/vre/pages/img/VRE_userGuide-Logo-300x100px.png"
               href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/user_guide/"
             >
-              A comprehensive guide for users and developers
+              A comprehensive guide for users and developers.
             </ResourceCard>
           </div>
         </section>
@@ -100,8 +100,8 @@ const Resources: NextPage = () => {
               imgSrc="/vre/pages/img/PhonixPACS-Logo-300x100px.png"
               href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/user_guide/Integrations/PACS/"
             >
-              A secure software solution designed for the storage, retrieval and
-              display of diagnostic images and reports.
+              A secure software solution designed for the storage, retrieval,
+              and display of diagnostic images and reports.
             </ResourceCard>
           </div>
         </section>

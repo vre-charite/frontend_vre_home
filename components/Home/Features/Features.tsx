@@ -15,12 +15,12 @@ export const Features = () => {
         </p>
         <p>
           <Link href="/pages/resources">Learn more</Link> about the VRE
-          Workbench Tools and Integrations​
+          Workbench Tools and Integrations​.
         </p>
         <h3>Collaboration</h3>
         <p>
-          The VRE is a project of the Translation Hub Digital Medicine funded by
-          the Berlin Institute of Health and developed in collaboration with
+          The VRE is a project of the Translation Hub Digital Medicine, funded
+          by the Berlin Institute of Health, and developed in collaboration with
           Business Division IT and industry partner Indoc Research. The VRE
           supports interoperability with large scale EU projects and
           international data commons.​​
@@ -123,8 +123,8 @@ export const Features = () => {
         <h3>Community</h3>
         <p>
           The VRE is a community development project. We follow the FAIR guiding
-          principles for scientific data management - Findability Accessibility
-          Interoperability Reusability.
+          principles for scientific data management - findability,
+          accessibility, interoperability, and reusability.
         </p>
         <p>
           ​​Please contact us to learn more about how to join the VRE community

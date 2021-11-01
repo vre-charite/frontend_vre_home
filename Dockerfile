@@ -10,3 +10,4 @@ RUN npm run ${PORTAL_ENV}
 FROM nginx
 COPY --from=0 out /usr/share/nginx/html/vre
 EXPOSE 80
+

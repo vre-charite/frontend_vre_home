@@ -52,14 +52,14 @@ const Support: NextPage = () => {
       category: paramObj['category'],
       name: paramObj['name'],
       email: paramObj['email'],
-      title: `[${paramObj['category']}] Inquery From VRE Support Page`,
+      title: `[${paramObj['category']}] Inquiry From VRE Support Page`,
       description: paramObj['message'],
     };
     await contactUsApi(params);
     message.success(
       {
         content:
-          'Thank you for submitting a request! VRE Support Team has received your request and will respond shortly​!',
+          'Thank you for submitting a request! VRE Support Team has received your request and will respond soon.',
         style: {
           marginTop: '20vh',
         },
@@ -87,13 +87,13 @@ const Support: NextPage = () => {
               <span>Support</span>
             </h3>
             <p>
-              The VRE Support team is available to help you with your questions
+              The VRE Support Team is available to help you with your questions
               about our services, tools, and integrations.{' '}
             </p>
             <p>
               You can contact the VRE Support Team for help by filling out the
-              Contact us form. You should receive a response in 1-2 business
-              days. For assistance with your Charité account, please visit the{' '}
+              Contact Us. You should receive a response in 1-2 business days.
+              For assistance with your Charité account, please visit the{' '}
               <a
                 target="_blank"
                 rel="noreferrer"
@@ -167,7 +167,7 @@ const Support: NextPage = () => {
                         },
                         {
                           type: 'email',
-                          message: 'Please input valid email',
+                          message: 'Please enter a valid email address',
                         },
                       ]}
                     >

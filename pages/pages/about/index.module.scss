@@ -5,7 +5,7 @@ $content-width: 1366px;
   max-width: $content-width;
   margin: 0 auto;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   a {
     text-decoration: underline;
     font-style: italic;
@@ -23,17 +23,19 @@ $content-width: 1366px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url('../../../public/pages/img/about-title-background.svg');
+    background-image: url('../../../public/pages/img/about-title-background.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px -200px;
     .big-title {
       font-size: 35px;
-      font-weight: 600;
+      font-weight: 500;
     }
     .sub-title {
       max-width: 775px;
-      padding-left: 32px;
+      padding-left: 25px;
+      font-weight: 400;
+      color: #595959;
     }
   }
 }
@@ -151,7 +153,6 @@ $content-width: 1366px;
       }
     }
     .right {
-
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -160,7 +161,7 @@ $content-width: 1366px;
       }
     }
 
-    @media (max-width:1316px) {
+    @media (max-width: 1316px) {
       flex-wrap: wrap-reverse;
       justify-content: center;
       row-gap: 50px;
@@ -188,7 +189,7 @@ $content-width: 1366px;
         font-weight: 600;
         height: 80px;
         text-align: center;
-        width: 237px;
+        width: 240px;
         display: flex;
         justify-content: center;
         align-content: center;

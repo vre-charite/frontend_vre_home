@@ -10,6 +10,7 @@ import {
 } from '../../../api/getStart';
 
 type FieldData = { type: string; username: string; email: string };
+const { TextArea } = Input;
 
 const GettingSartedCard = () => {
   const [step, setStep] = useState(1);
@@ -58,7 +59,7 @@ const GettingSartedCard = () => {
             }}
           >
             Thank you for your interest in the VRE. Please provide some
-            information to get started
+            information to get started.
           </p>
           <p
             style={{
@@ -68,7 +69,7 @@ const GettingSartedCard = () => {
               padding: '0px 50px',
             }}
           >
-            Your information is collected to confirm your Charite account in
+            Your information is collected to confirm your Charité account in
             accordance with our{' '}
             <a
               style={{ textDecoration: 'underline', fontStyle: 'italic' }}
@@ -78,9 +79,10 @@ const GettingSartedCard = () => {
             >
               Privacy Policy
             </a>
+            .
           </p>
           <div className={styles.sub_content}>
-            <p>Are you an employee of the Charite?</p>
+            <p>Are you an employee of the Charité?</p>
             <button
               className={[
                 styles.step_question_btn,
@@ -121,7 +123,9 @@ const GettingSartedCard = () => {
           if ((err as any).response?.status) {
             setEmployeeSubmitted(true);
           } else {
-            message.error('Failed to request account');
+            message.error(
+              'Something went wrong while attempting to submit your account request, please try again later.',
+            );
           }
         } finally {
           setLoadingEmployee(false);
@@ -141,12 +145,12 @@ const GettingSartedCard = () => {
               style={{
                 fontSize: '20px',
                 color: '#003262',
-                fontWeight: 600,
+                fontWeight: 500,
                 marginBottom: '20px',
               }}
             >
               Please provide the following information to register your VRE
-              account
+              account.
             </p>
             <CloseOutlined
               style={{ cursor: 'pointer', fontSize: '20px' }}
@@ -193,6 +197,10 @@ const GettingSartedCard = () => {
                     {
                       required: true,
                     },
+                    {
+                      type: 'email',
+                      message: 'Please enter a valid email address',
+                    },
                   ]}
                 >
                   <Input
@@ -231,7 +239,7 @@ const GettingSartedCard = () => {
                       height: '52px',
                       border: '0px',
                       fontSize: '20px',
-                      fontWeight: 600,
+                      fontWeight: 'bold',
                     }}
                     onClick={() => setStep(1)}
                   >
@@ -277,13 +285,13 @@ const GettingSartedCard = () => {
                 style={{
                   fontSize: '25px',
                   color: '#003262',
-                  fontWeight: 600,
+                  fontWeight: 500,
                   maxWidth: '600px',
                   lineHeight: '34px',
                 }}
               >
                 Do you currently have a business contract or Data Processing
-                Agreement with the Charite?
+                Agreement with the Charité?
               </p>
             </div>
             <div style={{ display: 'flex' }}>
@@ -345,7 +353,9 @@ const GettingSartedCard = () => {
           });
           setContractSubmitted(true);
         } catch (err) {
-          message.error('Failed to request account');
+          message.error(
+            'Something went wrong while attempting to submit your account request, please try again later.',
+          );
         } finally {
           setLoadingContract(false);
         }
@@ -364,7 +374,7 @@ const GettingSartedCard = () => {
               style={{
                 fontSize: '20px',
                 color: '#003262',
-                fontWeight: 600,
+                fontWeight: 500,
                 marginBottom: '20px',
               }}
             >
@@ -380,8 +390,6 @@ const GettingSartedCard = () => {
             />
           </div>
           <Form
-            //{...layout}
-            //ref={this.formRef}
             form={formContract}
             name="control-ref"
             layout="vertical"
@@ -434,6 +442,10 @@ const GettingSartedCard = () => {
                     {
                       required: true,
                     },
+                    {
+                      type: 'email',
+                      message: 'Please enter a valid email address',
+                    },
                   ]}
                 >
                   <Input
@@ -471,7 +483,7 @@ const GettingSartedCard = () => {
               }}
             >
               <p className={styles.form_para}>
-                Please provide an academic or industry affiliated email address
+                Please provide an academic or industry affiliated email address.
               </p>
             </div>
             <div style={{ padding: '0px 10px' }}>
@@ -485,7 +497,7 @@ const GettingSartedCard = () => {
                   },
                 ]}
               >
-                <Input
+                <TextArea
                   style={{
                     height: '99px',
                     borderRadius: '6px',
@@ -516,7 +528,7 @@ const GettingSartedCard = () => {
                   },
                 ]}
               >
-                <Input
+                <TextArea
                   style={{
                     height: '99px',
                     borderRadius: '6px',
@@ -578,7 +590,7 @@ const GettingSartedCard = () => {
               fontSize: '30px',
               color: '#003262',
               marginBottom: '2px',
-              fontWeight: 600,
+              fontWeight: 500,
             }}
           >
             Thank you for your interest!
@@ -595,30 +607,22 @@ const GettingSartedCard = () => {
           <p
             style={{ fontSize: '20px', color: '#003262', marginBottom: '0px' }}
           >
-            Unforunately, you are not eligible to receive a VRE account at this
-            time.
-          </p>
-          <p style={{ fontSize: '20px', color: '#003262' }}>
-            Please contact{' '}
+            VRE user accounts are available to users with a legitimate interest
+            (research, development or possibly others) from Europe and beyond.
+            If you would like to sign up for an account, please{' '}
             <Link href="/pages/support">
-              <span
-                style={{
-                  fontWeight: 'bold',
-                  fontStyle: 'italic',
-                  cursor: 'pointer',
-                }}
-              >
-                VRE Support
-              </span>
+              <a href="#" style={{ fontStyle: 'italic', color: '#1890ff' }}>
+                contact us
+              </a>
             </Link>{' '}
-            for help getting started with a Data Processing Agreement or
-            contract to set up access.
+            for more assistance.
           </p>
+
           <p style={{ fontSize: '20px', color: '#003262' }}>
             Please feel free to explore our public content at
             <a
               style={{
-                fontWeight: 'bold',
+                fontWeight: 500,
                 fontStyle: 'italic',
                 marginLeft: '7px',
                 textDecoration: 'underline',

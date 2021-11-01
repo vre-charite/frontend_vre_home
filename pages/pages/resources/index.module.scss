@@ -12,8 +12,10 @@
     color: $text-body-dark;
   }
   .resources {
-    max-width: 1214px;
-    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    max-width: 1276px;
+    margin: 20px auto 0;
     padding-top: 80px;
     padding-bottom: 80px;
     h2 {
@@ -21,7 +23,14 @@
       line-height: 47px;
     }
     .subtitle {
+      margin-top: 6px;
       max-width: 960px;
+      color: #595959;
+      padding-left: 25px;
+    }
+    @media (max-width: 1350px) {
+      padding-left: 45px;
+      padding-right: 45px;
     }
     @media screen and (max-width: 1213px) {
       width: 800px;
@@ -33,12 +42,19 @@
     height: 1px;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1;
+    img{
+      width: 100%;
+    }
   }
 }
 .workbench {
   max-width: 1214px;
   margin: 0 auto;
   margin-top: 40px;
+  position: relative;
+  z-index: 2;
   h2 {
     padding-left: 45px;
   }

@@ -10,7 +10,7 @@ import {
 } from '@ant-design/icons';
 import { Card } from 'antd';
 import { Footer } from '../../../components/Common/Footer/Footer';
-import Link from 'next/link'
+import Link from 'next/link';
 
 const About: NextPage = () => {
   return (
@@ -52,15 +52,23 @@ const About: NextPage = () => {
                 Research.
               </p>
               <p>
-                The VRE has undergone a GDPR Service Readiness audit by an
-                independent legal firm which confirms that the VRE can be
+                The VRE has undergone a{' '}
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/Privacy%20and%20Data%20Governance/GDPR%20Readiness%20Audit/"
+                >
+                  {' '}
+                  GDPR Service Readiness audit
+                </a>{' '}
+                by an independent legal firm which confirms that the VRE can be
                 offered as commissioned data processing for health-related
                 research projects in compliance with the requirements of the
                 European General Data Protection Regulation (GDPR). <br />
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/Privacy%20and%20Data%20Governance/GDPR%20Obligations%20for%20Researchers/"
+                  href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/Privacy%20and%20Data%20Governance/GDPR%20Readiness%20Audit/"
                 >
                   {' '}
                   More information.
@@ -131,7 +139,7 @@ const About: NextPage = () => {
                       rel="noreferrer"
                       href="https://bids.neuroimaging.io/"
                     >
-                      Brain Imaging Data Structure
+                      the Brain Imaging Data Structure
                     </a>
                   </li>
                 </ul>
@@ -220,7 +228,7 @@ const About: NextPage = () => {
             <div className={styles['right']}>
               <img
                 className={styles['img-feature']}
-                src="/vre/pages/img/VRE-Diagram.jpg"
+                src="/vre/pages/img/VRE-Diagram.png"
                 alt=""
               />
             </div>
@@ -233,12 +241,12 @@ const About: NextPage = () => {
                 Request a Test Account
               </div>
               <Link href="/pages/getting_started">
-              <div className={styles['get-started']}>
-                <span>
-                  <CaretRightOutlined />
-                  Let&apos;s get started
-                </span>
-              </div>
+                <div className={styles['get-started']}>
+                  <span>
+                    <CaretRightOutlined />
+                    Let&apos;s get started
+                  </span>
+                </div>
               </Link>
             </div>
           </div>
@@ -255,7 +263,7 @@ const About: NextPage = () => {
                   Anna-Louisa-Karsch-Str. 2<br /> 10178 Berlin
                   <br /> Tel.: +49 (0)30 450 543 049 <br />
                   Fax: +49 (0)30 450 7543999
-                  <br /> E-mail:{' '}
+                  <br /> E-Mail:{' '}
                   <a href="mailto:info@bih-charite.de">info@bih-charite.de</a>
                   <br />
                 </div>

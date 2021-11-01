@@ -19,8 +19,8 @@ export const Footer = (props: any) => {
               />
             </Link>
             <p>
-              Making research data findable, accessible, interoperable and
-              reusable.
+              Making it easier for researchers to manage, share, and process
+              complex research data.
             </p>
             <a
               target="_blank"
@@ -65,7 +65,13 @@ export const Footer = (props: any) => {
                 <Link href="/pages/support">Contact Us</Link>
               </li>
               <li>
-                <Link href="/pages/resources">Documentation</Link>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/"
+                >
+                  Documentation
+                </a>
               </li>
               <li>
                 <a
@@ -78,9 +84,9 @@ export const Footer = (props: any) => {
               </li>
               <li>
                 <a
-                  onClick={() => {
-                    setModalVisibility(true);
-                  }}
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/Privacy%20and%20Data%20Governance/General%20Terms%20of%20Use/"
                 >
                   Terms of Use
                 </a>

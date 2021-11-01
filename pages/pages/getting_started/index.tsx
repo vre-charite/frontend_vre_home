@@ -15,7 +15,7 @@ const questionOneContent = [
         <li>
           Accounts for testing the VRE are available to employees of the Charité
           and to members of external organizations who have a contractual
-          agreement with the Charite (e.g. subcontract, collaboration, data
+          agreement with the Charité (e.g. subcontract, collaboration, data
           processing and/or service agreement) If none of these situations
           applies to you, please contact the VRE support team to see how you can
           be included in the VRE community.
@@ -45,7 +45,7 @@ const questionOneContent = [
           >
             vre.charite.de
           </a>{' '}
-          and log in using your Charite credentials to complete your
+          and log in using your Charité credentials to complete your
           registration. You will now have access to the Test Project.
           <br /> If you do not receive the email within one business day, please
           contact the VRE support team for assistance. If you are a member of an
