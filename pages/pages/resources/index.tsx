@@ -87,7 +87,7 @@ const Resources: NextPage = () => {
           </div>
         </section>
         <section className={styles['hospital']}>
-          <h2>Hospitals Integrations</h2>
+          <h2>Hospital Integrations</h2>
           <div className={styles['cards-container']}>
             <ResourceCard
               imgSrc="/vre/pages/img/RedCap-Logo-300x100px.png"
