@@ -61,7 +61,7 @@ const Resources: NextPage = () => {
             </ResourceCard>
             <ResourceCard
               imgSrc="/vre/pages/img/XWIKI-Logo-300x100px.png"
-              href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/user_guide/8%20Collaboration%20Tools/XWiki/"
+              href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/user_guide/Managing%20Projects/Project%20Wiki/"
             >
               A collaborative content management tool for project documentation
               and learning resources.
