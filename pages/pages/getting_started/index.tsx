@@ -41,7 +41,11 @@ const questionOneContent = [
             target="_blank"
             rel="noreferrer"
             href="https://vre.charite.de"
-            style={{ fontStyle: 'italic', color: '#1890FF' }}
+            style={{
+              fontStyle: 'italic',
+              color: '#1890FF',
+              textDecoration: 'underline',
+            }}
           >
             vre.charite.de
           </a>{' '}
@@ -114,7 +118,11 @@ const questionTwoContent = [
             target="_blank"
             rel="noreferrer"
             href="mailto:vre-support@charite.de"
-            style={{ fontStyle: 'italic', color: '#1890FF' }}
+            style={{
+              fontStyle: 'italic',
+              color: '#1890FF',
+              textDecoration: 'underline',
+            }}
           >
             VRE support team
           </a>{' '}
@@ -149,7 +157,18 @@ const questionThreeContent = [
     contents: (
       <p>
         For assistance with your VRE test account, you can contact the{' '}
-        <a>VRE Support Team</a>
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="mailto:vre-support@charite.de"
+          style={{
+            fontStyle: 'italic',
+            color: '#1890FF',
+            textDecoration: 'underline',
+          }}
+        >
+          VRE Support Team
+        </a>
       </p>
     ),
   },
@@ -164,7 +183,11 @@ const questionThreeContent = [
           target="_blank"
           rel="noreferrer"
           href="https://zugang.charite.de/"
-          style={{ fontStyle: 'italic', color: '#1890FF' }}
+          style={{
+            fontStyle: 'italic',
+            color: '#1890FF',
+            textDecoration: 'underline',
+          }}
         >
           zugang.charite.de/
         </a>{' '}

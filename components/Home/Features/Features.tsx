@@ -14,21 +14,26 @@ export const Features = () => {
           analyse, catalogue, and share their research data. ​
         </p>
         <p>
-          <Link href="/pages/resources">Learn more</Link> about the VRE
-          Workbench Tools and Integrations​.
+          <span style={{ textDecoration: 'underline' }}>
+            <Link href="/pages/resources">Learn more</Link>
+          </span>{' '}
+          about the VRE Workbench Tools and Integrations​.
         </p>
         <h3>Collaboration</h3>
         <p>
           The VRE is a project of the Translation Hub Digital Medicine, funded
           by the Berlin Institute of Health, and developed in collaboration with
-          Business Division IT and industry partner Indoc Research. The VRE
+          Business Division IT and industry partner, Indoc Research. The VRE
           supports interoperability with large scale EU projects and
           international data commons.​​
         </p>
         <p>
           The VRE is a portable solution. Please{' '}
-          <Link href="/pages/support">contact us</Link> to find out more about
-          getting the VRE established at your institution. ​
+          <span style={{ textDecoration: 'underline' }}>
+            <Link href="/pages/support">contact us</Link>
+          </span>{' '}
+          to find out more about getting the VRE established at your
+          institution. ​
         </p>
         <ul className={styles.collaborators_list}>
           <li>
@@ -123,8 +128,8 @@ export const Features = () => {
         <h3>Community</h3>
         <p>
           The VRE is a community development project. We follow the FAIR guiding
-          principles for scientific data management - findability,
-          accessibility, interoperability, and reusability.
+          principles for scientific data management - Findability,
+          Accessibility, Interoperability, and Reusability.
         </p>
         <p>
           ​​Please contact us to learn more about how to join the VRE community
@@ -137,8 +142,10 @@ export const Features = () => {
       <div className={styles.bottom_links}>
         <Link href="/pages/getting_started">
           <div className={styles.link_button}>
-            <CaretRightOutlined />
-            <span>Get Started</span>
+            <div className={styles.btn_content_one}>
+              <CaretRightOutlined />
+              <span className={styles.span_one}>Get Started</span>
+            </div>
           </div>
         </Link>
         <a
@@ -147,8 +154,10 @@ export const Features = () => {
           href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/user_guide/"
         >
           <div className={styles.link_button}>
-            <ReadOutlined />
-            <span>User Guide</span>
+            <div className={styles.btn_content_two}>
+              <ReadOutlined />
+              <span className={styles.span_two}>User Guide</span>
+            </div>
           </div>
         </a>
       </div>

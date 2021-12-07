@@ -3,8 +3,25 @@ import Link from 'next/link';
 import { Button } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { useKeycloak } from '@react-keycloak/ssr';
+import { matchPath } from 'react-router';
+import { useRouter } from 'next/router';
+import { KeycloakInstance } from 'keycloak-js';
+
 export const Header = (props: any) => {
-  const { keycloak, initialized } = useKeycloak();
+  const { keycloak, initialized } = useKeycloak<KeycloakInstance>();
+  const router = useRouter();
+  const isMatchPath = (path: string) => {
+    console.log(router.pathname, path);
+    const match = matchPath(router.pathname, {
+      path,
+      exact: true,
+      strict: false,
+    });
+    return match;
+  };
+  if (!initialized) {
+    return null;
+  }
   return (
     <header className={styles.home_header_wrapper}>
       <div className={styles.home_header_content}>
@@ -13,22 +30,52 @@ export const Header = (props: any) => {
             className={styles.home_logo}
             src="/vre/pages/img/logo.png"
             alt="logo"
-            width="139"
-            height="36"
+            width="185"
+            height="48"
           />
         </Link>
         <ul className={styles.header_right_navs}>
           <li>
-            <Link href="/pages/about">About</Link>
+            <Link href="/pages/about">
+              <span
+                className={isMatchPath('/pages/about') ? styles['on-page'] : ''}
+              >
+                About
+              </span>
+            </Link>
           </li>
           <li>
-            <Link href="/pages/getting_started">Getting Started</Link>
+            <Link href="/pages/getting_started">
+              <span
+                className={
+                  isMatchPath('/pages/getting_started') ? styles['on-page'] : ''
+                }
+              >
+                Getting Started
+              </span>
+            </Link>
           </li>
           <li>
-            <Link href="/pages/resources">Resources</Link>
+            <Link href="/pages/resources">
+              <span
+                className={
+                  isMatchPath('/pages/resources') ? styles['on-page'] : ''
+                }
+              >
+                Resources
+              </span>
+            </Link>
           </li>
           <li>
-            <Link href="/pages/support">Support</Link>
+            <Link href="/pages/support">
+              <span
+                className={
+                  isMatchPath('/pages/support') ? styles['on-page'] : ''
+                }
+              >
+                Support
+              </span>
+            </Link>
           </li>
           <li>
             <Button
@@ -39,7 +86,11 @@ export const Header = (props: any) => {
               }}
               type="primary"
             >
-              Login
+              <span>
+                {keycloak?.authenticated
+                  ? (keycloak.tokenParsed as any)?.preferred_username + ''
+                  : 'Login'}
+              </span>
             </Button>
           </li>
         </ul>

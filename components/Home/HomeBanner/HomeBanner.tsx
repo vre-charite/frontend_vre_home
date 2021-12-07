@@ -3,7 +3,14 @@ import Link from 'next/link';
 export const HomeBanner = () => {
   return (
     <div className={styles.banner_wrapper}>
-      <img src="/vre/pages/img/home-banner-bg-gradient.png" />
+      <img
+        className={styles.banner_wrapper_bg}
+        src="/vre/pages/img/home-banner-background.jpg"
+      />
+      <img
+        className={styles.banner_gradient_img}
+        src="/vre/pages/img/home-banner-bg-gradient.png"
+      />
       <div className={styles.banner_content}>
         <div className={styles.banner_block}>
           <h2>Virtual Research Environment</h2>
@@ -24,6 +31,7 @@ export const HomeBanner = () => {
                   target="_blank"
                   rel="noreferrer"
                   href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/Privacy%20and%20Data%20Governance/GDPR%20Readiness%20Audit/"
+                  style={{ fontStyle: 'italic', textDecoration: 'underline' }}
                 >
                   {' '}
                   GDPR Service Readiness audit.

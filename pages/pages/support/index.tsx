@@ -92,8 +92,8 @@ const Support: NextPage = () => {
             </p>
             <p>
               You can contact the VRE Support Team for help by filling out the
-              Contact Us. You should receive a response in 1-2 business days.
-              For assistance with your Charité account, please visit the{' '}
+              Contact Us form. You should receive a response in 1-2 business
+              days. For assistance with your Charité account, please visit the{' '}
               <a
                 target="_blank"
                 rel="noreferrer"
@@ -136,7 +136,7 @@ const Support: NextPage = () => {
                       name="name"
                       label="Name"
                       rules={[
-                        { required: true, message: 'Please input your name' },
+                        { required: true, message: 'Please input your name.' },
                         {
                           validator: (rule, value) => {
                             if (!value) return Promise.reject();
@@ -147,7 +147,7 @@ const Support: NextPage = () => {
                             return isLengthValid
                               ? Promise.resolve()
                               : Promise.reject(
-                                  'The name must be between 1 and 100 characters',
+                                  'The name must be between 1 and 100 characters.',
                                 );
                           },
                         },
@@ -163,11 +163,11 @@ const Support: NextPage = () => {
                       rules={[
                         {
                           required: true,
-                          message: 'Please input your email',
+                          message: 'Please input your email.',
                         },
                         {
                           type: 'email',
-                          message: 'Please enter a valid email address',
+                          message: 'Please enter a valid email address.',
                         },
                       ]}
                     >
@@ -178,7 +178,9 @@ const Support: NextPage = () => {
                 <Form.Item
                   name="category"
                   label="Category"
-                  rules={[{ required: true, message: 'Please input category' }]}
+                  rules={[
+                    { required: true, message: 'Please input category.' },
+                  ]}
                 >
                   <Select>
                     <Option value="General Inquiry">General Inquiry</Option>
@@ -194,7 +196,7 @@ const Support: NextPage = () => {
                   name="message"
                   label="Message"
                   rules={[
-                    { required: true, message: 'Please input your message' },
+                    { required: true, message: 'Please input your message.' },
                     {
                       validator: (rule, value) => {
                         if (!value) return Promise.reject();
@@ -206,7 +208,7 @@ const Support: NextPage = () => {
                         return isLengthValid
                           ? Promise.resolve()
                           : Promise.reject(
-                              'The message must be between 10 and 1000 characters',
+                              'The message must be between 10 and 1000 characters.',
                             );
                       },
                     },

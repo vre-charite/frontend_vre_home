@@ -1,5 +1,6 @@
+@import '../../../styles/variables.scss';
 .home_header_wrapper {
-  background-color: #003262;
+  background-color: $background-dark;
 }
 .home_logo {
   margin-left: 33px;
@@ -24,8 +25,12 @@
     font-size: 16px;
     margin-right: 45px;
     font-weight: 400;
+    cursor: pointer;
   }
 }
 .nav_login_btn {
   border-radius: 6px;
+}
+.on-page {
+  color: #1890ff;
 }

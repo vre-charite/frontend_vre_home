@@ -1,9 +1,28 @@
 import styles from './Footer.module.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { TermsOfUseModal } from '../../Common/TermsOfUseModal/TermsOfUseModal';
+import { ReleaseNoteModal } from '../ReleaseNoteModal/ReleaseNoteModal';
+import { getReleaseNotes } from '../../../api/release';
+import { Button } from 'antd';
 export const Footer = (props: any) => {
   const [modalVisibility, setModalVisibility] = useState(false);
+  const [releaseVisible, setReleaseVisible] = useState(false);
+  const [versionsArr, setVersionArr] = useState<any[]>([]);
+  const [version, setVersion] = useState<any>('0.0.0');
+  useEffect(() => {
+    async function init() {
+      try {
+        const res = await getReleaseNotes();
+        const versions = (res as any).data?.versions;
+        const currentVersion =
+          versions && versions[0] ? versions[0].version : null;
+        setVersionArr(versions);
+        setVersion(currentVersion);
+      } catch (err) {}
+    }
+    init();
+  }, []);
   return (
     <>
       <div className={styles.home_footer_wrapper}>
@@ -73,34 +92,56 @@ export const Footer = (props: any) => {
                   Documentation
                 </a>
               </li>
+
               <li>
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/Privacy%20and%20Data%20Governance/Privacy%20Policy/"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/Privacy%20and%20Data%20Governance/General%20Terms%20of%20Use/"
-                >
-                  Terms of Use
-                </a>
-              </li>
-              <li>
-                <Link href="/pages/about">Imprint</Link>
+                <Link href="/pages/about#imprint">Imprint</Link>
               </li>
             </ul>
           </div>
         </div>
         <div className={styles.home_footer_note}>
-          <p>Copyright ©2021, Indoc Research. All rights reserved</p>
+          <div className={styles.home_footer_note_content}>
+            <div className={styles.home_footer_left}>
+              <ul>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/Privacy%20and%20Data%20Governance/Privacy%20Policy/"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/Privacy%20and%20Data%20Governance/General%20Terms%20of%20Use/"
+                  >
+                    Terms of Use
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className={styles.home_footer_right}>
+              <a
+                onClick={() => {
+                  setReleaseVisible(true);
+                }}
+              >
+                Version {version}
+              </a>{' '}
+              / <p>Copyright ©2021, Indoc Research. All rights reserved</p>
+            </div>
+          </div>
         </div>
       </div>
+      <ReleaseNoteModal
+        setVisible={setReleaseVisible}
+        visible={releaseVisible}
+        versionsArr={versionsArr}
+        version={version}
+      />
       <TermsOfUseModal
         handleOk={() => {
           setModalVisibility(false);

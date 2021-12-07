@@ -11,6 +11,8 @@ import {
 import { Card } from 'antd';
 import { Footer } from '../../../components/Common/Footer/Footer';
 import Link from 'next/link';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 const About: NextPage = () => {
   return (
@@ -133,13 +135,13 @@ const About: NextPage = () => {
                   </li>
                   <li>
                     {' '}
-                    Support for common data standards such as{' '}
+                    Support for common data standards such as the{' '}
                     <a
                       target="_blank"
                       rel="noreferrer"
                       href="https://bids.neuroimaging.io/"
                     >
-                      the Brain Imaging Data Structure
+                      Brain Imaging Data Structure
                     </a>
                   </li>
                 </ul>
@@ -151,7 +153,7 @@ const About: NextPage = () => {
                   <li>
                     {' '}
                     Datalad support for rich provenance of code with data and
-                    metadata.
+                    metadata
                   </li>
                 </ul>
               </FairCard>
@@ -221,16 +223,20 @@ const About: NextPage = () => {
                   Metadata repository and graph database for capture and query
                   of metadata and lineage tracking, and support for ontologies
                   and automated extraction and indexing of standard metadata
-                  fields to make data findable. 
+                  fields to make data findable
                 </li>
               </ul>
             </div>
             <div className={styles['right']}>
-              <img
-                className={styles['img-feature']}
-                src="/vre/pages/img/VRE-Diagram.png"
-                alt=""
-              />
+              <Zoom>
+                {' '}
+                <img
+                  className={styles['img-feature']}
+                  src="/vre/pages/img/VRE-Diagram.jpg"
+                  alt=""
+                  width="100%"
+                />
+              </Zoom>
             </div>
           </div>
         </section>
@@ -252,6 +258,7 @@ const About: NextPage = () => {
           </div>
         </section>
         <section className={styles['imprint']}>
+          <a id="imprint"></a>
           <div className={styles['content']}>
             <Card title="Imprint" className={styles['imprint-card']}>
               <address>

@@ -5,7 +5,7 @@
   color: $text-body-dark;
   font-size: 20px;
   padding-bottom: 40px;
-  padding-top: 20px;
+  padding-top: 42px;
   overflow: hidden;
   h2 {
     font-size: 35px;
@@ -44,7 +44,7 @@
     align-items: center;
     position: relative;
     z-index: 1;
-    img{
+    img {
       width: 100%;
     }
   }
@@ -55,9 +55,6 @@
   margin-top: 40px;
   position: relative;
   z-index: 2;
-  h2 {
-    padding-left: 45px;
-  }
   @media screen and (max-width: 1213px) {
     width: 800px;
   }
@@ -67,9 +64,6 @@
   max-width: 1214px;
   margin: 0 auto;
   margin-top: 60px;
-  h2 {
-    padding-left: 45px;
-  }
   @media screen and (max-width: 1213px) {
     width: 800px;
   }
@@ -79,9 +73,6 @@
   max-width: 1214px;
   margin: 0 auto;
   margin-top: 60px;
-  h2 {
-    padding-left: 45px;
-  }
   @media screen and (max-width: 1213px) {
     width: 800px;
   }
@@ -91,9 +82,6 @@
   max-width: 1214px;
   margin: 0 auto;
   margin-top: 60px;
-  h2 {
-    padding-left: 45px;
-  }
   @media screen and (max-width: 1213px) {
     width: 800px;
   }

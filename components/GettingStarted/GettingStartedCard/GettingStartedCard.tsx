@@ -157,6 +157,7 @@ const GettingSartedCard = () => {
               onClick={() => {
                 setStep(2);
                 setEmployeeSubmitted(false);
+                formEmployee.resetFields();
               }}
             />
           </div>
@@ -177,6 +178,7 @@ const GettingSartedCard = () => {
                   rules={[
                     {
                       required: true,
+                      message: 'Please enter your username.',
                     },
                   ]}
                 >
@@ -196,10 +198,11 @@ const GettingSartedCard = () => {
                   rules={[
                     {
                       required: true,
+                      message: 'Please enter your email address.',
                     },
                     {
                       type: 'email',
-                      message: 'Please enter a valid email address',
+                      message: 'Please enter a valid email address.',
                     },
                   ]}
                 >
@@ -241,7 +244,10 @@ const GettingSartedCard = () => {
                       fontSize: '20px',
                       fontWeight: 'bold',
                     }}
-                    onClick={() => setStep(1)}
+                    onClick={() => {
+                      setStep(1);
+                      formEmployee.resetFields();
+                    }}
                   >
                     Cancel
                   </Button>
@@ -403,6 +409,7 @@ const GettingSartedCard = () => {
                   rules={[
                     {
                       required: true,
+                      message: 'Please enter your first name.',
                     },
                   ]}
                 >
@@ -421,6 +428,7 @@ const GettingSartedCard = () => {
                   rules={[
                     {
                       required: true,
+                      message: 'Please enter your last name.',
                     },
                   ]}
                 >
@@ -441,10 +449,11 @@ const GettingSartedCard = () => {
                   rules={[
                     {
                       required: true,
+                      message: 'Please enter your institutional email address.',
                     },
                     {
                       type: 'email',
-                      message: 'Please enter a valid email address',
+                      message: 'Please enter a valid email address.',
                     },
                   ]}
                 >
@@ -463,6 +472,7 @@ const GettingSartedCard = () => {
                   rules={[
                     {
                       required: true,
+                      message: 'Please enter your institution.',
                     },
                   ]}
                 >
@@ -494,6 +504,8 @@ const GettingSartedCard = () => {
                 rules={[
                   {
                     required: true,
+                    message:
+                      'Please provide information about your contract or data processing agreement.',
                   },
                 ]}
               >
@@ -525,6 +537,8 @@ const GettingSartedCard = () => {
                 rules={[
                   {
                     required: true,
+                    message:
+                      'Please provide information regarding your interest in using the VRE.',
                   },
                 ]}
               >

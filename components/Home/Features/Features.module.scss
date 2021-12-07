@@ -34,6 +34,7 @@
       color: #1890ff;
       cursor: pointer;
       font-style: italic;
+      //text-decoration: 'underline';
     }
   }
 }
@@ -158,5 +159,11 @@
   span {
     margin-left: 12px;
     vertical-align: middle;
+  }
+  .btn_content_one {
+    margin-right: 12px;
+  }
+  .btn_content_two {
+    margin-right: 8px;
   }
 }
