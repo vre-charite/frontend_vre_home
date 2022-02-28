@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-conf-vre-home
+  namespace: utility
+data:
+  vre-home.conf: |
+    server {
+      listen       80;
+      listen  [::]:80;
+      server_name _;
+      location / {
+          root  /usr/share/nginx/html/vre;
+          index  index.html index.htm;
+          autoindex on;
+          try_files $uri $uri/ @htmlext;
+      }
+      location  @htmlext {
+          rewrite ^(.*)$ $1.html last;
+      }
+    }
+
