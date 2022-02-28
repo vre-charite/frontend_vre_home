@@ -16,4 +16,5 @@ const serverAxios = axios.create({
 const resourceAxios = axios.create({
   baseURL: serverBase,
 });
+
 export { serverAxios, resourceAxios };

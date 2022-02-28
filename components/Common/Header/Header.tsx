@@ -79,6 +79,7 @@ export const Header = (props: any) => {
           </li>
           <li>
             <Button
+              id="auth_login_btn"
               className={styles.nav_login_btn}
               icon={<UserOutlined />}
               onClick={(e) => {
