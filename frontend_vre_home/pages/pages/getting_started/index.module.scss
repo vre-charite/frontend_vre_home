@@ -1,0 +1,74 @@
+@import '../../../styles/variables.scss';
+
+.title {
+  color: $text-body-dark;
+  background-color: $background-light;
+
+  .content {
+    padding: 0 45px;
+    height: 212px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    .big-title {
+      font-size: 35px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.getting_started_card {
+  background-color: #f0f2f5;
+  .content {
+    margin: 0px 50px;
+    :global {
+      .ant-card {
+        border-radius: 8px;
+      }
+    }
+  }
+  :global {
+    .ant-card-body {
+      padding: 0px;
+    }
+  }
+}
+
+.frequently_questions {
+  background-color: #f0f2f5;
+  padding: 80px 45px;
+  .title {
+    font-size: 35px;
+    font-weight: 500;
+    color: #062c57;
+    margin-bottom: 15px;
+  }
+  .question_one,
+  .question_two {
+    padding: 0px 30px;
+    margin-bottom: 40px;
+    > p {
+      font-size: 20px;
+      font-weight: 500;
+      color: #062c57;
+    }
+  }
+  .question_three {
+    padding: 0px 30px;
+    overflow: hidden;
+    > p {
+      font-size: 20px;
+      font-weight: 500;
+      color: #062c57;
+    }
+  }
+}
+
+.main {
+  background-color: #f0f2f5;
+  .main_div {
+    max-width: 1366px;
+    margin: 0 auto;
+  }
+}

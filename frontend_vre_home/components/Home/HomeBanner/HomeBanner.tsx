@@ -1,0 +1,46 @@
+import styles from './HomeBanner.module.scss';
+import Link from 'next/link';
+export const HomeBanner = () => {
+  return (
+    <div className={styles.banner_wrapper}>
+      <img
+        className={styles.banner_wrapper_bg}
+        src="/vre/pages/img/home-banner-background.jpg"
+      />
+      <img
+        className={styles.banner_gradient_img}
+        src="/vre/pages/img/home-banner-bg-gradient.png"
+      />
+      <div className={styles.banner_content}>
+        <div className={styles.banner_block}>
+          <h2>Virtual Research Environment</h2>
+          <p>
+            Making it easier for researchers to manage, share, and process
+            complex research data.
+          </p>
+          <Link href="/pages/about">
+            <div className={styles.banner_learn_more}>Learn more</div>
+          </Link>
+          <div className={styles.banner_gdpr}>
+            <img src="/vre/pages/img/GDPR-ready-Gold.svg" />
+            <div className={styles.banner_gdpr_text}>
+              <h4>GDPR READY</h4>
+              <p>
+                The VRE has undergone a successful{' '}
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://vre.charite.de/xwiki/wiki/vrepublic/view/Main/Privacy%20and%20Data%20Governance/GDPR%20Readiness%20Audit/"
+                  style={{ fontStyle: 'italic', textDecoration: 'underline' }}
+                >
+                  {' '}
+                  GDPR Service Readiness audit.
+                </a>{' '}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
