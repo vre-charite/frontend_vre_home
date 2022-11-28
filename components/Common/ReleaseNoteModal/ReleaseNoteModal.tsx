@@ -92,7 +92,7 @@ export function ReleaseNoteModal(props: {
         ]}
         title={
           <>
-            <img alt="release note" width={25} src="/vre/Rocket.svg"></img>{' '}
+            <img alt="release note" width={25} src="/vre/Rocket.png"></img>{' '}
             <b>
               {`Release Note ${version === 'all' ? ' (all)' : version}` +
                 getSuffix(version, version)}
