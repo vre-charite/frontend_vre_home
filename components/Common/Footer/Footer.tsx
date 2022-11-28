@@ -151,7 +151,40 @@ export const Footer = (props: any) => {
               >
                 Version {version}
               </a>{' '}
-              / <p>Copyright ©2021, Indoc Research. All rights reserved</p>
+              / <p>
+                VRE is a product developed jointly by{' '}
+                <a
+                  href="https://www.charite.de/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Charité
+                </a>
+                /
+                <a
+                  href="https://www.bihealth.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  BIH
+                </a>{' '}
+                and{' '}
+                <a
+                  href="https://www.indocresearch.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Indoc Research
+                </a>{' '}
+                and powered by{' '}
+                <a
+                  href="https://github.com/PilotDataPlatform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Indoc Pilot
+                </a>
+              </p>
             </div>
           </div>
         </div>
